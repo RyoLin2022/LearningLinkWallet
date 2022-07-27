@@ -4,10 +4,6 @@
 
 // document.write(phrase.indexOf("l"));
 // //alert("請連結bsc網路");
-function handle_click() {
-    alert("你按啥");
-}
-
 var btn = document.getElementById("btn2");
 btn.addEventListener("click", function(){
     alert("別按了");
@@ -26,3 +22,16 @@ function requestAccount() {
     }
 }
 
+function connectWallet() {
+    
+    if (typeof window.ethereum !== 'undefined') {
+      await requestAccount();
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+
+      var btnConnect = document.getElementById("connect-btn");
+      btnConnect.innerText = "Wallet Connected";
+
+    } else {
+      alert("Please install Metamask");
+    }
+}
