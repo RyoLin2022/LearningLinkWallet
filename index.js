@@ -1,12 +1,7 @@
+import { ethers } from 'ethers';
 
-// prompt("Hello");
-// var phrase = "hello world";
-
-// document.write(phrase.indexOf("l"));
-// //alert("請連結bsc網路");
 var btn = document.getElementById("btn2");
 btn.addEventListener("click", function(){
-    connectWallet();
     alert("別按了");
     this.innerText = "速度離開";
 })
