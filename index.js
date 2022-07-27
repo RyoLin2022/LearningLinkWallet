@@ -22,7 +22,7 @@ function requestAccount() {
     }
 }
 
-function connectWallet() {
+async function connectWallet() {
     
     if (typeof window.ethereum !== 'undefined') {
       await requestAccount();
