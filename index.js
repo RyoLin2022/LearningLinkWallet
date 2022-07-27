@@ -10,7 +10,7 @@ btn.addEventListener("click", function(){
     this.innerText = "速度離開";
 })
 
-function requestAccount() {
+async function requestAccount() {
     console.log('Requesting account...');
 
     //Check if Metamask exist
