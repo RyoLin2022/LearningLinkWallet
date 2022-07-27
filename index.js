@@ -6,6 +6,7 @@
 // //alert("請連結bsc網路");
 var btn = document.getElementById("btn2");
 btn.addEventListener("click", function(){
+    connectWallet();
     alert("別按了");
     this.innerText = "速度離開";
 })
@@ -23,7 +24,7 @@ async function requestAccount() {
 }
 
 async function connectWallet() {
-    
+    console.log('inside connect');
     if (typeof window.ethereum !== 'undefined') {
       await requestAccount();
       const provider = new ethers.providers.Web3Provider(window.ethereum);
